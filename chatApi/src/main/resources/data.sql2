@@ -1,0 +1,58 @@
+insert into chat_user(email, user_name, password)
+values('mikebingp@gmail.com', 'Michael', '1234');
+
+insert into chat_user(email, user_name, password)
+values('somto@gmail.com', 'Somto', '1234');
+
+insert into chat_user(email, user_name, password)
+values('kingsleyvire@gmail.com', 'Kingsley', '1234');
+
+insert into chat_user(email, user_name, password)
+values('philip@gmail.com', 'Philip', '1234');
+
+insert into conversation()
+values();
+
+insert into conversation()
+values();
+
+insert into conversation()
+values();
+
+insert into conversation_participants(conversation_id, participants_id)
+values(2,1);
+insert into conversation_participants(conversation_id, participants_id)
+values(2,3);
+
+insert into conversation_participants(conversation_id, participants_id)
+values(1,1);
+insert into conversation_participants(conversation_id, participants_id)
+values(1,2);
+
+insert into conversation_participants(conversation_id, participants_id)
+values(3,3);
+insert into conversation_participants(conversation_id, participants_id)
+values(3,2);
+
+
+insert into message(conversation_id, sender_id, timestamp, content)
+values(2,1,current_time(), 'What is your name');
+insert into message(conversation_id, sender_id, timestamp, content)
+values(2,3,current_time(), 'My name is michael');
+insert into message(conversation_id, sender_id, timestamp, content)
+values(2,1,current_time(), 'How are you doing ');
+
+
+insert into message(conversation_id, sender_id, timestamp, content)
+values(1,1,current_time(), 'Is your name John');
+insert into message(conversation_id, sender_id, timestamp, content)
+values(1,2,current_time(), 'Yes');
+insert into message(conversation_id, sender_id, timestamp, content)
+values(1,1,current_time(), 'Alright');
+
+insert into message(conversation_id, sender_id, timestamp, content)
+values(3,2,current_time(), 'What are you doing?');
+insert into message(conversation_id, sender_id, timestamp, content)
+values(3,3,current_time(), 'I am running');
+insert into message(conversation_id, sender_id, timestamp, content)
+values(3,2,current_time(), 'That is nice');

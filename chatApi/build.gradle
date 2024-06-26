@@ -1,0 +1,45 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.2.4'
+	id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'com.chat.app'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-hateoas'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.springframework.data:spring-data-rest-hal-explorer'
+	runtimeOnly 'com.mysql:mysql-connector-j'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+    implementation 'com.nimbusds:nimbus-jose-jwt:9.22'
+    
+	testImplementation 'org.springframework.security:spring-security-test'
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0'
+	
+	
+	
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
